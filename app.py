@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 #load in data
 df = pd.read_csv('tiktok_data.csv')
@@ -11,6 +12,10 @@ id = most_popular['id']
 
 st.title('Welcome to the Tik Tok Dashboard')
 st.write('below.....')
+
+fig = px.histogram(df, x='text', y='playCount')
+st.plotly_chart(fig, use_container_width=True)
+
 
 col1, col2,col3 = st.columns(3)
 
