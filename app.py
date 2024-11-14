@@ -12,27 +12,25 @@ id = most_popular['id']
 st.title('Welcome to the Tik Tok Dashboard')
 st.write('below.....')
 
+col1, col2,col3 = st.columns(3)
 
-st.subheader('Most Popular Video')
+col1.subheader('Most Popular Video')
 video_file = open("6894081763379924229.mp4", 'rb')
 video_bytes = video_file.read()
-st.video(video_bytes)
+col1.video(video_bytes)
 
 creator =  most_popular['authorMeta_name']
 desc = most_popular['text']
-st.write(f"Creator Name: {most_popular['authorMeta_name'].values[0]}")
-st.write(f"Description: {most_popular['text'].values[0]} ")
-st.write(f"Play Count: {most_popular['playCount'].values[0]} ")
+col1.write(f"Creator Name: {most_popular['authorMeta_name'].values[0]}")
+col1.write(f"Description: {most_popular['text'].values[0]} ")
+col1.write(f"Play Count: {most_popular['playCount'].values[0]} ")
 
-#TO DO: Find the most popular video and find the most popular song
-#most popular tiktoker
 
-col1, col2 = st.columns(2)
 most_popular_song = df[df['playCount'] == df.groupby('musicMeta_musicName')['playCount'].transform('max')]
-col1.subheader('The Most Popular Song')
-col1.write(f"Audio Title: {most_popular_song['musicMeta_musicName'].values[0]}")
-col1.write(f"Audio Creator: {most_popular_song['musicMeta_musicAuthor'].values[0]}")
-col1.write(f"Audio Play Count: {most_popular_song['playCount'].values[0]}")
+col3.subheader('The Most Popular Song')
+col3.write(f"Audio Title: {most_popular_song['musicMeta_musicName'].values[0]}")
+col3.write(f"Audio Creator: {most_popular_song['musicMeta_musicAuthor'].values[0]}")
+col3.write(f"Audio Play Count: {most_popular_song['playCount'].values[0]}")
 
 
 
