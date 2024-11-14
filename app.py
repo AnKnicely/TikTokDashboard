@@ -7,7 +7,7 @@ df = pd.read_csv('tiktok_data.csv')
 #This is the dashboard homepage
 
 st.set_page_config(layout='wide')
-st.sidebar.markdown("<img src= 'https://w7.pngwing.com/pngs/959/454/png-transparent-tiktok-logo-thumbnail.png' width = 70/>", unsafe_allow_html=True )
+st.sidebar.markdown("<img src= 'https://w7.pngwing.com/pngs/959/454/png-transparent-tiktok-logo-thumbnail.png' width = 50/><h1 style = 'display:inline-block'>Welcome to the Tik Tok Dashboard</h1>", unsafe_allow_html=True )
 st.sidebar.markdown("This dashboard contains many different statistics and analysis performed on a Tik Tok Dataset")
 st.sidebar.markdown("Below there are many links to different pages each analyzing a different section")
 
