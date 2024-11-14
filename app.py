@@ -6,6 +6,15 @@ import plotly.express as px
 df = pd.read_csv('tiktok_data.csv')
 #This is the dashboard homepage
 
+st.set_page_config(layout='wide')
+st.sidebar.markdown("<img src= 'https://w7.pngwing.com/pngs/959/454/png-transparent-tiktok-logo-thumbnail.png' width = 70/>", unsafe_allow_html=True )
+st.sidebar.markdown("This dashboard contains many different statistics and analysis performed on a Tik Tok Dataset")
+st.sidebar.markdown("Below there are many links to different pages each analyzing a different section")
+
+
+
+
+
 most_popular = df[df['playCount'] == df['playCount'].max()]
 id = most_popular['id']
 #use this id to find the file on desktop
