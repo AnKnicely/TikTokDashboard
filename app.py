@@ -14,8 +14,7 @@ st.sidebar.markdown("Below there are many links to different pages each analyzin
 page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Contact Us"])
 if page == "Homepage":
 
-    st.markdown("<h3> All About the Data </h3>")
-    st.markdown("<p> Insert more info here </p>")
+    st.html("<h3> All About the Data </h3><p> Insert more info here </p>")
 
     fig = px.histogram(df, x='text', y='playCount')
     st.plotly_chart(fig, use_container_width=True)
