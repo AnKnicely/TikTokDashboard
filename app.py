@@ -67,7 +67,6 @@ elif page == "Sound Analytics":
             st.write("There is no data for this audio")
         else:
             st.write(filtered_df)
-        df
 
     #Visuals
         fig = px.histogram(filtered_df, x='musicMeta_musicName', y= 'playCount')
