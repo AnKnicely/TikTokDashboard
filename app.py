@@ -21,7 +21,7 @@ if page == "Homepage":
 
 
     col1, col2,col3 = st.columns(3)
-
+    st.html("<br> </br>")
     #use this id to find the file on desktop
     most_popular = df[df['playCount'] == df['playCount'].max()]
     id = most_popular['id']
