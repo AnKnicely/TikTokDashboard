@@ -9,7 +9,7 @@ df = pd.read_csv('tiktok_data.csv')
 #st.set_page_config(layout='wide')
 st.sidebar.markdown("<img src= 'https://w7.pngwing.com/pngs/959/454/png-transparent-tiktok-logo-thumbnail.png' width = 50/><h1 style = 'display:inline-block'>Welcome to the Tik Tok Dashboard</h1>", unsafe_allow_html=True )
 st.sidebar.markdown("This dashboard contains many different statistics and analysis performed on a Tik Tok Dataset")
-st.sidebar.markdown("Each page has different graphs that can be interacted with via: <ul><li>Clicking on the graph</li><li>Clicking and dragging on the graph</li><li>Using the UI buttons on top of the graph</li>")
+st.sidebar.markdown("<p> Each page has different graphs that can be interacted with via: <ul><li>Clicking on the graph</li><li>Clicking and dragging on the graph</li><li>Using the UI buttons on top of the graph</li></ol></p>", unsafe_allow_html = True)
 st.sidebar.markdown("Pages can be changed via the drop down menu named 'Menu'")
 
 page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Contact Us"])
