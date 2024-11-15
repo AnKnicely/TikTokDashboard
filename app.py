@@ -22,6 +22,7 @@ if page == "Homepage":
 
     col1, col2,col3 = st.columns(3)
     st.html("<br> </br>")
+    st.html("<br> </br>")
     #use this id to find the file on desktop
     most_popular = df[df['playCount'] == df['playCount'].max()]
     id = most_popular['id']
@@ -39,7 +40,7 @@ if page == "Homepage":
     #creation of description for the most popular sound
     most_popular_song = df[df['playCount'] == df.groupby('musicMeta_musicName')['playCount'].transform('max')]
     col3.subheader('The Most Popular Song')
-    col3.image("images.jpg", caption="Pop Smoke - Elements")
+    col3.image("images.jpg", caption="Pop Smoke - Elements", width = 80)
     col3.write(f"Audio Title: {most_popular_song['musicMeta_musicName'].values[0]}")
     col3.write(f"Audio Creator: {most_popular_song['musicMeta_musicAuthor'].values[0]}")
     col3.write(f"Audio Play Count: {most_popular_song['playCount'].values[0]}")
