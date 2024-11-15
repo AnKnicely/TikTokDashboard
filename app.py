@@ -9,12 +9,13 @@ df = pd.read_csv('tiktok_data.csv')
 #st.set_page_config(layout='wide')
 st.sidebar.markdown("<img src= 'https://w7.pngwing.com/pngs/959/454/png-transparent-tiktok-logo-thumbnail.png' width = 50/><h1 style = 'display:inline-block'>Welcome to the Tik Tok Dashboard</h1>", unsafe_allow_html=True )
 st.sidebar.markdown("This dashboard contains many different statistics and analysis performed on a Tik Tok Dataset")
-st.sidebar.markdown("Below there are many links to different pages each analyzing a different section")
+st.sidebar.markdown("Each page has different graphs that can be interacted with via: <ul><li>Clicking on the graph</li><li>Clicking and dragging on the graph</li><li>Using the UI buttons on top of the graph</li>")
+st.sidebar.markdown("Pages can be changed via the drop down menu named 'Menu'")
 
 page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Contact Us"])
 if page == "Homepage":
 
-    st.html("<h3> All About the Data </h3><p> Insert more info here </p>")
+    st.html("<h3> All About the Data </h3><p> This dataset was created by Erik van de Ven. It contains 1,000 different values for trending Tik Toks from 2020. Each cell gives information on the creator, audio used, view count, share count, and comment count. </p>")
 
     fig = px.histogram(df, x='text', y='playCount')
     st.plotly_chart(fig, use_container_width=True)
