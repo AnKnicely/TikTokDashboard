@@ -58,7 +58,7 @@ elif page == "Sound Analytics":
 
     #Button
     if st.button('Get data'):
-        #run after button is pressed
+    #run after button is pressed
         st.write(audio)
         filtered_df = df[df['musicMeta_musicName'].str.contains(audio,case= False, na= False)]
         if filtered_df.empty:
@@ -67,11 +67,14 @@ elif page == "Sound Analytics":
             st.write(filtered_df)
         df
 
-        #Vizuals
+    #Visuals
         fig = px.histogram(filtered_df, x='musicMeta_musicName', y= 'playCount')
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
+        scatter1 = px.scatter(filtered_df, x = 'commentCount', y= 'shareCount')
+        left_col.plotly_chart(scatter1, use_container_width=True)
+    
 elif page == "Contact Us":
     st.write("Hello")
         
