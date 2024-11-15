@@ -76,7 +76,7 @@ elif page == "Sound Analytics":
         left_col.plotly_chart(scatter1, use_container_width=True)
         
         scatter2 = px.scatter(filtered_df, x = 'shareCount', y= 'playCount')
-        left_col.plotly_chart(scatter1, use_container_width=True)
+        right_col.plotly_chart(scatter2, use_container_width=True)
     
 elif page == "Contact Us":
     st.write("Hello")
