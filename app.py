@@ -55,7 +55,9 @@ if page == "Homepage":
     col2.write(f"Verified? {most_popular_tiktoker['authorMeta_verified'].values[0]}")
 elif page == "Sound Analytics":
     audio = st.text_input('Search for a specific audio', value = "")
-
+    st.html("<h2> Welcome to the Sound Analytics Dashboard!</h2>")
+    st.html("<h3> How this page works: </h3>")
+    st.html("<p><ol><li>Type in a song title into the 'Search for a specific audio'</li><li>Press the 'Get Data' button</li></ol> You may also interact with the histogram graph as mentioned previously. </p>")
     #Button
     if st.button('Get data'):
     #run after button is pressed
