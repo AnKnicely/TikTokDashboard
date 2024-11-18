@@ -50,9 +50,9 @@ if page == "Homepage":
     #Creation of description for the most popular creator
     most_popular_tiktoker = df[df['playCount'] == df.groupby('authorMeta_name')['playCount'].transform('max')]
     col2.subheader('Most Popular Creator')
-    video_file2 = open("6894081763379924229.mp4", 'rb') #addition of the video
+    video_file2 = open("6907228749016714497.mp4", 'rb') #addition of the video
     video_bytes2 = video_file2.read()
-    col1.video(video_bytes2)
+    col2.video(video_bytes2)
     col2.write(f"Creator Name: {most_popular_tiktoker['authorMeta_name'].values[0]}")
     col2.write(f"Video Count: {most_popular_tiktoker['playCount'].values[0]}")
     col2.write(f"Verified? {most_popular_tiktoker['authorMeta_verified'].values[0]}")
