@@ -12,7 +12,7 @@ st.sidebar.markdown("This dashboard contains many different statistics and analy
 st.sidebar.markdown("<p> Each page has different graphs that can be interacted with via: <ul><li>Clicking on the graph</li><li>Clicking and dragging on the graph</li><li>Using the UI buttons on top of the graph</li></ol></p>", unsafe_allow_html = True)
 st.sidebar.markdown("Pages can be changed via the drop down menu named 'Menu'")
 
-page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Contact Us"])
+page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Resources"])
 if page == "Homepage":
 
     st.html("<h3> All About the Data </h3><p> This dataset was created by Erik van de Ven. It contains 1,000 different values for trending Tik Toks from 2020. Each cell gives information on the creator, audio used, view count, share count, and comment count. </p>")
@@ -20,10 +20,8 @@ if page == "Homepage":
     fig = px.histogram(df, x='text', y='playCount')
     st.plotly_chart(fig, use_container_width=True)
 
-
     col1, col2,col3 = st.columns(3)
-    st.html("<br> </br>")
-    st.html("<br> </br>")
+
     #use this id to find the file on desktop
     most_popular = df[df['playCount'] == df['playCount'].max()]
     id = most_popular['id']
@@ -45,7 +43,6 @@ if page == "Homepage":
     col3.write(f"Audio Title: {most_popular_song['musicMeta_musicName'].values[0]}")
     col3.write(f"Audio Creator: {most_popular_song['musicMeta_musicAuthor'].values[0]}")
     col3.write(f"Audio Play Count: {most_popular_song['playCount'].values[0]}")
-
 
     #Creation of description for the most popular creator
     most_popular_tiktoker = df[df['playCount'] == df.groupby('authorMeta_name')['playCount'].transform('max')]
@@ -82,6 +79,11 @@ elif page == "Sound Analytics":
         scatter2 = px.scatter(filtered_df, x = 'shareCount', y= 'playCount')
         right_col.plotly_chart(scatter2, use_container_width=True)
     
-elif page == "Contact Us":
-    st.write("Hello")
+elif page == "Resources":
+    st.html("<h2>Welcome to the Resources Page!<h2>")
+    l_col, r_col = st.columns(2)
+    l_col.html("<h3>Dataset Information </h3>")
+    l_col.html("<p><ul><li><a href= 'https://www.kaggle.com/erikvdven'>Created by Eric van de Ven: </a></li><li>Dataset: <a href = 'https://www.kaggle.com/datasets/erikvdven/tiktok-trending-december-2020'>TikTok Trending Videos</a></li></ul></p>")
+
+    r_col.html("<h3>Creator Information</h3>")
         
