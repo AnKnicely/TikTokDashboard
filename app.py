@@ -15,7 +15,7 @@ st.sidebar.markdown("Pages can be changed via the drop down menu named 'Menu'")
 page = st.selectbox("Menu:", ["Homepage","Sound Analytics","Resources"])
 if page == "Homepage":
 
-    st.html("<h3> All About the Data </h3><p> This dataset was created by Erik van de Ven. It contains 1,000 different values for trending Tik Toks from 2020. Each cell gives information on the creator, audio used, view count, share count, and comment count. </p>")
+    st.html("<h3> All About the Data </h3><p> This dataset was created by Erik van de Ven. It contains 1,000 different values for trending Tik Toks from December 2020. Each cell gives information on the creator, audio used, view count, share count, and comment count. </p>")
 
     fig = px.histogram(df, x='text', y='playCount')
     st.plotly_chart(fig, use_container_width=True)
@@ -83,7 +83,10 @@ elif page == "Resources":
     st.html("<h2>Welcome to the Resources Page!<h2>")
     l_col, r_col = st.columns(2)
     l_col.html("<h3>Dataset Information </h3>")
-    l_col.html("<p><ul><li><a href= 'https://www.kaggle.com/erikvdven'>Created by Eric van de Ven: </a></li><li>Dataset: <a href = 'https://www.kaggle.com/datasets/erikvdven/tiktok-trending-december-2020'>TikTok Trending Videos</a></li></ul></p>")
+    l_col.html("<p><ul><li><a href= 'https://www.kaggle.com/erikvdven'>Created by Eric van de Ven </a></li><li>Dataset: <a href = 'https://www.kaggle.com/datasets/erikvdven/tiktok-trending-december-2020'>TikTok Trending Videos</a></li></ul></p>")
 
     r_col.html("<h3>Creator Information</h3>")
+    r_col.html("<p><ul>Created by: <li> Ashley Knicely</li></ol></p>"
+    r_col.html("<p><ul>Start Date: <li> 11/01/24</li></ol></p>")
+    r_col.html("<p><ul>End Date: <li>TBD</li></ol></p>")
         
