@@ -78,9 +78,13 @@ elif page == "Sound Analytics":
                               y= 'shareCount',
                              size = 'playCount',
                              color = 'playCount')
-        left_col.plotly_chart(scatter1, use_container_width=True)
+        left_col.plotly_chart(scatter1,use_container_width=True)
         
-        scatter2 = px.scatter(filtered_df, x = 'shareCount', y= 'playCount')
+        scatter2 = px.scatter(filtered_df,
+                              x = 'shareCount',
+                              y= 'playCount',
+                             size = 'commentCount',
+                             color = 'commentCount')
         right_col.plotly_chart(scatter2, use_container_width=True)
     
 elif page == "Resources":
