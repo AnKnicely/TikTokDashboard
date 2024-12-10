@@ -21,7 +21,11 @@ if page == "Homepage":
                        x='text', 
                        y='playCount', 
                        color = 'playCount',
-                       color_continuous_scale = 'Viridis')
+                       )
+    fig.update_layout(
+        xaxis_label = 'Video Caption',
+        yaxis_label = '# of Plays',
+        showlegend = False)
     st.plotly_chart(fig, use_container_width=True)
 
     col1, col2,col3 = st.columns(3)
