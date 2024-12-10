@@ -92,7 +92,7 @@ elif page == "Sound Analytics":
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
-        scatter1 = px.scatter(filtered_df,
+        scatter1 = px.scatter(filtered_df2,
                               x = 'commentCount', 
                               y= 'shareCount',
                              size = 'playCount',
@@ -104,7 +104,7 @@ elif page == "Sound Analytics":
         )
         left_col.plotly_chart(scatter1,use_container_width=True)
         
-        scatter2 = px.scatter(filtered_df,
+        scatter2 = px.scatter(filtered_df2,
                               x = 'shareCount',
                               y= 'playCount',
                              size = 'commentCount',
