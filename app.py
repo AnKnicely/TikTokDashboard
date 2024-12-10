@@ -86,7 +86,5 @@ elif page == "Resources":
     l_col.html("<p><ul><li><a href= 'https://www.kaggle.com/erikvdven'>Created by Eric van de Ven </a></li><li>Dataset: <a href = 'https://www.kaggle.com/datasets/erikvdven/tiktok-trending-december-2020'>TikTok Trending Videos</a></li></ul></p>")
 
     r_col.html("<h3>Creator Information</h3>")
-    r_col.html("<p><ul>Created by: <li> Ashley Knicely</li></ol></p>")
-    r_col.html("<p><ul>Start Date: <li> 11/01/24</li></ol></p>")
-    r_col.html("<p><ul>End Date: <li>TBD</li></ol></p>")
-        
+    r_col.html("<p><ul>Created by: <li> Ashley Knicely</li></ul><ul>Start Date: <li> 11/01/24</li></ul> <ul>End Date: <li>TBD</li></ul></p>")
+
