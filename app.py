@@ -69,7 +69,9 @@ elif page == "Sound Analytics":
             st.write(filtered_df)
 
     #Visuals
-        fig = px.histogram(filtered_df, 
+        aggregated_df = filtered_df.groupby('musicMeta_musicName').agg({'playCount':'sum'}).reset_index()
+        
+        fig = px.histogram(aggregated_df, 
                            x='musicMeta_musicName', 
                            y= 'playCount',
                           color = 'playCount',
