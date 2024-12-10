@@ -71,8 +71,8 @@ elif page == "Sound Analytics":
     #Visuals
         
         fig = px.histogram(filtered_df, 
-                           x='playCount', 
-                           y = 'musicMeta_musicName',
+                           x = 'musicMeta_musicName',
+                           y='playCount', 
                            color = 'playCount',
                            barmode = 'group'
                           )
