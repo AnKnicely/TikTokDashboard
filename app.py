@@ -76,6 +76,10 @@ elif page == "Sound Analytics":
                            color = 'playCount',
                            barmode = 'group'
                           )
+        fig.update_layout(
+            xaxis_title = "Music Title",
+            yaxis_title = "# of Plays"
+        )
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
@@ -85,6 +89,10 @@ elif page == "Sound Analytics":
                              size = 'playCount',
                              color = 'playCount',
                              color_continuous_scale = 'Viridis')
+         scatter1.update_layout(
+            xaxis_title = "# of Comments",
+            yaxis_title = "# of Shares"
+        )
         left_col.plotly_chart(scatter1,use_container_width=True)
         
         scatter2 = px.scatter(filtered_df,
@@ -93,6 +101,10 @@ elif page == "Sound Analytics":
                              size = 'commentCount',
                              color = 'commentCount',
                              color_continuous_scale = 'Viridis')
+         scatter2.update_layout(
+            xaxis_title = "# of Shares",
+            yaxis_title = "# of Plays"
+        )
         right_col.plotly_chart(scatter2, use_container_width=True)
     
 elif page == "Resources":
