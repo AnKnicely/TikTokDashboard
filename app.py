@@ -73,10 +73,10 @@ elif page == "Sound Analytics":
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
-        scatter1 = px.scatter(filtered_df, x = 'commentCount', y= 'shareCount', color = "size")
+        scatter1 = px.scatter(filtered_df, x = 'commentCount', y= 'shareCount', color = "sepal_length", color_continous_scale = px.colors.sequential.Viridis)
         left_col.plotly_chart(scatter1, use_container_width=True)
         
-        scatter2 = px.scatter(filtered_df, x = 'shareCount', y= 'playCount', color = "size")
+        scatter2 = px.scatter(filtered_df, x = 'shareCount', y= 'playCount')
         right_col.plotly_chart(scatter2, use_container_width=True)
     
 elif page == "Resources":
