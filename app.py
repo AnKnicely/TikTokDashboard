@@ -78,7 +78,7 @@ elif page == "Sound Analytics":
 
     #Visuals
         filtered_df2 = filtered_df[filtered_df['playCount'] < 100000000]
-        filtered_df2 = filtered_df[filtered_df['playCount'] > 5000000]
+        filtered_df2 = filtered_df[filtered_df['playCount'] > 1000000]
         fig = px.histogram(filtered_df2, 
                            x = 'musicMeta_musicName',
                            y='playCount', 
