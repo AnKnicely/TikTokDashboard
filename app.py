@@ -73,7 +73,7 @@ elif page == "Sound Analytics":
         fig = px.histogram(filtered_df, 
                            x='playCount', 
                           color = 'playCount',
-                          nbins = 20,
+                          nbins = 50,
                           histnorm = 'percent')
         st.plotly_chart(fig, use_container_width= True)
 
