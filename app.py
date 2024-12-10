@@ -89,7 +89,7 @@ elif page == "Sound Analytics":
                              size = 'playCount',
                              color = 'playCount',
                              color_continuous_scale = 'Viridis')
-         scatter1.update_layout(
+        scatter1.update_layout(
             xaxis_title = "# of Comments",
             yaxis_title = "# of Shares"
         )
@@ -101,7 +101,7 @@ elif page == "Sound Analytics":
                              size = 'commentCount',
                              color = 'commentCount',
                              color_continuous_scale = 'Viridis')
-         scatter2.update_layout(
+        scatter2.update_layout(
             xaxis_title = "# of Shares",
             yaxis_title = "# of Plays"
         )
