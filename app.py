@@ -17,7 +17,11 @@ if page == "Homepage":
 
     st.html("<h3> All About the Data </h3><p> This dataset was created by Erik van de Ven. It contains 1,000 different values for trending Tik Toks from December 2020. Each cell gives information on the creator, audio used, view count, share count, and comment count. </p>")
 
-    fig = px.histogram(df, x='text', y='playCount')
+    fig = px.histogram(df, 
+                       x='text', 
+                       y='playCount', 
+                       color = 'playCount',
+                       color_continuous_scale = 'Viridis')
     st.plotly_chart(fig, use_container_width=True)
 
     col1, col2,col3 = st.columns(3)
