@@ -23,8 +23,8 @@ if page == "Homepage":
                        color = 'playCount',
                        )
     fig.update_layout(
-        xaxis_label = 'Video Caption',
-        yaxis_label = '# of Plays',
+        xaxis_title = 'Video Caption',
+        yaxis_title = '# of Plays',
         showlegend = False)
     st.plotly_chart(fig, use_container_width=True)
 
