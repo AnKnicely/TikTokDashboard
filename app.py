@@ -73,7 +73,8 @@ elif page == "Sound Analytics":
                            x='musicMeta_musicName', 
                            y= 'playCount',
                           color = 'playCount',
-                          barmode = 'group')
+                          barmode = 'group',
+                          bins = 30)
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
