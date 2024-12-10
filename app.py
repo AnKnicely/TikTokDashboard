@@ -76,7 +76,7 @@ elif page == "Sound Analytics":
                            y= 'playCount',
                           color = 'playCount',
                           barmode = 'group',
-                          nbins = 5)
+                          nbinsx = 5)
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
