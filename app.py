@@ -69,13 +69,11 @@ elif page == "Sound Analytics":
             st.write(filtered_df)
 
     #Visuals
-        aggregated_df = filtered_df.groupby('musicMeta_musicName').agg({'playCount':'sum'}).reset_index()
         
-        fig = px.histogram(aggregated_df, 
-                           x='musicMeta_musicName', 
-                           y= 'playCount',
+        fig = px.histogram(filtered_df, 
+                           x='playCount', 
                           color = 'playCount',
-                          barmode = 'group')
+                          nbins = 5)
         st.plotly_chart(fig, use_container_width= True)
 
         left_col, right_col = st.columns(2)
