@@ -78,7 +78,8 @@ elif page == "Sound Analytics":
                           )
         fig.update_layout(
             xaxis_title = "Music Title",
-            yaxis_title = "# of Plays"
+            yaxis_title = "# of Plays",
+            showlegend = False
         )
         st.plotly_chart(fig, use_container_width= True)
 
